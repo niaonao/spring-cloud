@@ -1,0 +1,28 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server
+#  profiles:
+#    active: native
+  config:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/niaonao/springcloud
+          username: niaonao
+          password: QWERqwer1234
+          default-label: master
+          search-paths: /doc/config
+#        svn:
+#          uri:
+#          default-label:
+#          password:
+#          username:
+#          search-paths:
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.15.1:8761/eureka/
